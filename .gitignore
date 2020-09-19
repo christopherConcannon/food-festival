@@ -1,1 +1,5 @@
 node_modules/
+
+_script.min.js
+
+_vendor/
