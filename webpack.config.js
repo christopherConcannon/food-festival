@@ -10,6 +10,7 @@ module.exports =  {
     tickets: './assets/js/tickets'
   },
   // output: {
+      // path.resolve(__dirname, '<dir/file>') resolves an absolute path to the <dir/file> from whatever the current directory (__dirname) is on any given machine the script is being run so the path does not have to be hard-coded.  Every Node script has __dirname loaded by default 
   //   path: path.resolve(__dirname, 'dist'),
   //   filename: 'main.bundle.js'
   // },
@@ -17,6 +18,7 @@ module.exports =  {
     filename: '[name].bundle.js',
     path: __dirname + '/dist'
   },
+  // loaders
   module: {
     rules: [
       {
