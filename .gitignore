@@ -3,3 +3,7 @@ node_modules/
 _script.min.js
 
 _vendor/
+
+_script-pre-split.js
+
+_main.bundle.js
