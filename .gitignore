@@ -4,6 +4,8 @@ _script.min.js
 
 _vendor/
 
-_script-pre-split.js
+script-pre-split.js
 
-_main.bundle.js
+
+pre-entry-split-main.bundle.js
+
