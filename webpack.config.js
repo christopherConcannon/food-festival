@@ -17,13 +17,13 @@ module.exports = {
 	// },
 	output  : {
 		filename : '[name].bundle.js',
-    // path: path.resolve(__dirname, 'dist')
-    path     : __dirname + '/dist'
+		// path: path.resolve(__dirname, 'dist')
+		path     : __dirname + '/dist'
 	},
 	// loaders
 	module  : {
 		rules : [
-      // emit carousel images to output path
+			// emit carousel images to output path
 			{
 				test : /\.jpg$/i,
 				use  : [
@@ -54,22 +54,23 @@ module.exports = {
 			// analyzerMode : 'static' // the report outputs to an HTML file in the dist folder
 			analyzerMode : 'disable' // stop reporting and automatic opening in browser
 		}),
-		// new WebpackPwaManifest({
-		// 	name             : 'Food Event',
-		// 	short_name       : 'Foodies',
-		// 	description      : 'An app that allows you to view upcoming food events.',
-		// 	background_color : '#01579b',
-		// 	theme_color      : '#ffffff',
-		// 	fingerprints     : false,
-		// 	inject           : false,
-		// 	icons            : [
-		// 		{
-		// 			src         : path.resolve('assets/img/icons/icon-512x512.png'),
-		// 			sizes       : [ 96, 128, 192, 256, 384, 512 ],
-		// 			destination : path.join('assets', 'icons')
-		// 		}
-		// 	]
-		// })
+		new WebpackPwaManifest({
+			name             : 'Food Event',
+			short_name       : 'Foodies',
+			description      : 'An app that allows you to view upcoming food events.',
+			background_color : '#01579b',
+			theme_color      : '#ffffff',
+			start_url        : '../../index.html',
+			fingerprints     : false,
+			inject           : false,
+			icons            : [
+				{
+					src         : path.resolve('assets/img/icons/icon-512x512.png'),
+					sizes       : [ 96, 128, 192, 256, 384, 512 ],
+					destination : path.join('assets', 'icons')
+				}
+			]
+		})
 	],
 	mode    : 'development'
 };
